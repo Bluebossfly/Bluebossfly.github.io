@@ -6,65 +6,88 @@
     <title>我的个人网站</title>  
     <link rel="stylesheet" href="styles.css">  
     <style>  
-        body {  
-            font-family: 'Arial', sans-serif;  
+        * {  
+            box-sizing: border-box;  
             margin: 0;  
             padding: 0;  
-            background-color: #eef2f3;  
-            color: #333;  
+        }  
+        body {  
+            font-family: 'Arial', sans-serif;  
+            line-height: 1.6;  
+            background-color: #f8f9fa;  
+            color: #212529;  
         }  
         header {  
-            background: linear-gradient(to right, #4CAF50, #81C784);  
+            background: linear-gradient(135deg, #6f42c1, #e83e8c);  
             padding: 20px 0;  
             text-align: center;  
             color: white;  
+            position: relative;  
         }  
         nav {  
-            margin: 20px 0;  
+            margin: 10px 0;  
         }  
         nav a {  
             margin: 0 15px;  
             color: white;  
             text-decoration: none;  
-            font-weight: bold;  
+            padding: 5px 10px;  
+            border-radius: 5px;  
+            transition: background 0.3s;  
         }  
         nav a:hover {  
-            text-decoration: underline;  
+            background: rgba(255, 255, 255, 0.2);  
         }  
         section {  
-            padding: 20px;  
+            padding: 40px 20px;  
             margin: 20px auto;  
             max-width: 800px;  
             background-color: white;  
-            border-radius: 8px;  
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+            border-radius: 10px;  
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  
+            position: relative;  
+            overflow: hidden;  
         }  
         h2 {  
-            color: #4CAF50;  
+            color: #6f42c1;  
+            margin-bottom: 20px;  
+            position: relative;  
+        }  
+        h2::after {  
+            content: "";  
+            display: block;  
+            width: 50px;  
+            height: 4px;  
+            background: #e83e8c;  
+            margin-top: 10px;  
+            border-radius: 2px;  
         }  
         .gallery {  
-            display: flex;  
-            flex-wrap: wrap;  
-            gap: 10px;  
-            justify-content: center;  
+            display: grid;  
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  
+            gap: 15px;  
         }  
         .gallery img {  
-            width: 300px;  
-            border-radius: 5px;  
-            transition: transform 0.3s;  
+            width: 100%;  
+            border-radius: 8px;  
+            transition: transform 0.3s, box-shadow 0.3s;  
         }  
         .gallery img:hover {  
             transform: scale(1.05);  
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  
         }  
         footer {  
             text-align: center;  
-            padding: 20px 0;  
-            background-color: #4CAF50;  
+            padding: 20px;  
+            background-color: #6f42c1;  
             color: white;  
             position: relative;  
-            bottom: 0;  
-            left: 0;  
-            right: 0;  
+        }  
+        @media (max-width: 600px) {  
+            nav a {  
+                display: inline-block;  
+                margin: 5px;  
+            }  
         }  
     </style>  
 </head>  
@@ -81,7 +104,8 @@
 
 <section id="about">  
     <h2>关于我</h2>  
-    <p>您好！我是一名热爱编程、设计与创意的开发者。通过网站，我希望能够展示我的项目以及分享我的经历与技能。感谢您访问我的个人网站！</p>  
+    <p>您好！我是一名热爱编程、设计与创意的开发者和设计师。在这个网站上，我希望能够展示我的项目与才华，同时与其他人分享我的经历和见解。感谢您访问我的个人网站！</p>  
+    <p>在业余时间，我喜欢阅读技术书籍和参与开源项目。未来我想更深入地探索人工智能和机器学习领域。</p>  
 </section>  
 
 <section id="gallery">  
@@ -97,6 +121,11 @@
 <section id="contact">  
     <h2>联系方式</h2>  
     <p>如果您希望与我联系，请通过电子邮件发送至：<a href="mailto:your_email@example.com">your_email@example.com</a></p>  
+    <p>您还可以在社交媒体上找到我：</p>  
+    <ul>  
+        <li><a href="https://github.com/your_username" target="_blank">GitHub</a></li>  
+        <li><a href="https://linkedin.com/in/your_username" target="_blank">LinkedIn</a></li>  
+    </ul>  
 </section>  
 
 <footer>  
@@ -104,4 +133,4 @@
 </footer>  
 
 </body>  
-</html>  
+</html>
